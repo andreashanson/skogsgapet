@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const path = ('path');
+const path = require('path');
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
@@ -9,8 +9,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 require("./db.js");
 
+app.use(express.static(path.join(__dirname, '../client/build')));
+
 app.get('*', (req, res) => {
-    res.json({test: "test"});
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 const port = process.env.PORT || 5000;

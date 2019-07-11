@@ -1,14 +1,15 @@
 import React from 'react';
+import Header from './Components/Header/Header.js';
+import './App.css';
 import Button from '@material-ui/core/Button';
 
 function App() {
   return (
     <div className="App">
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <Header />
     </div>
   );
 }
 
 export default App;
+     

@@ -13,9 +13,9 @@ function Header() {
     const links = ["Home", "Guide Lines", "Tips", "Contact"]
 
     return (
-        <header style={style}>
-            <div><img src={logo} /></div>
-            <Menu menuLinks={links}/>
+        <header style={ style } >
+            <img src={ logo } />
+            <Menu menuLinks={ links } />
         </header>
     )
 }
